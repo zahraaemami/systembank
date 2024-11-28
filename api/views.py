@@ -38,10 +38,10 @@ class ClientManagerViewSet(viewsets.ModelViewSet) :
     serializer_class = ClientManagerSerializer
 
 
-class AccountViewSet(viewsets.ModelViewSet) :
+# class AccountViewSet(viewsets.ModelViewSet) :
 
-    queryset = Account.objects.all()
-    serializer_class = AccountSerializer
+#     queryset = Account.objects.all()
+#     serializer_class = AccountSerializer
 
 
 class TransferViewSet(viewsets.ModelViewSet) :
@@ -60,3 +60,10 @@ class DepositViewSet(viewsets.ModelViewSet) :
 
     queryset = Deposit.objects.all()
     serializer_class = DepositSerializer
+
+
+class AccountAPIView(generics.ListAPIView) :
+
+    queryset = Account.objects.all()
+    serializer_class = AccountSerializer
+    

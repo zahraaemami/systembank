@@ -10,7 +10,6 @@ class Branch (models.Model) :
     name  = models.CharField(max_length = 150)
     address  = models.CharField(max_length = 150)
     branch_code  = models.CharField(max_length = 150)
-    
 
     class Meta :
         verbose_name_plural = "Branches"
